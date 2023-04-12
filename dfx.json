@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "texas_backend": {
+      "main": "src/texas_backend/main.mo",
+      "type": "motoko"
+    },
+    "texas_frontend": {
+      "dependencies": [
+        "texas_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/texas_frontend/src/index.html"
+      },
+      "source": [
+        "src/texas_frontend/assets",
+        "dist/texas_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
